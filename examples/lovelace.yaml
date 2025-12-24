@@ -1,0 +1,128 @@
+# Smart Glass Card - Example Lovelace Configuration
+# Copy this to your Lovelace configuration or use as reference
+
+title: Smart Home Dashboard
+views:
+  - title: Home
+    path: home
+    cards:
+      # Example 1: Simple light control
+      - type: custom:smart-glass-card
+        entity: light.living_room
+        name: Living Room
+        icon: mdi:lightbulb
+        color: amber
+        card_type: slider
+
+      # Example 2: Grid layout with multiple cards
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: custom:smart-glass-card
+            entity: light.bedroom
+            name: Bedroom Light
+            icon: mdi:lightbulb
+            color: amber
+            card_type: slider
+
+          - type: custom:smart-glass-card
+            entity: fan.bedroom
+            name: Ceiling Fan
+            icon: mdi:fan
+            color: emerald
+
+          - type: custom:smart-glass-card
+            entity: switch.bedside_lamp
+            name: Bedside Lamp
+            icon: mdi:lamp
+            color: rose
+
+          - type: custom:smart-glass-card
+            entity: light.hallway
+            name: Hallway
+            icon: mdi:lightbulb-outline
+            color: blue
+
+  - title: Bathroom
+    path: bathroom
+    cards:
+      # Scene chips at the top
+      - type: horizontal-stack
+        cards:
+          - type: custom:simple-badge-card
+            entity: scene.bathroom_relax
+            name: Relax
+          - type: custom:simple-badge-card
+            entity: scene.bathroom_morning
+            name: Morning
+          - type: custom:simple-badge-card
+            entity: scene.bathroom_ventilation
+            name: Vent
+
+      # Main controls
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: custom:smart-glass-card
+            entity: light.bathroom_vanity
+            name: Vanity Light
+            subtitle: Mirror LED
+            icon: mdi:lightbulb
+            color: amber
+            card_type: slider
+
+          - type: custom:smart-glass-card
+            entity: fan.bathroom_exhaust
+            name: Vent Fan
+            subtitle: Humidity Control
+            icon: mdi:fan
+            color: emerald
+
+          - type: custom:smart-glass-card
+            entity: switch.towel_rail
+            name: Towel Rail
+            subtitle: Heated Rack
+            icon: mdi:radiator
+            color: rose
+
+          - type: custom:smart-glass-card
+            entity: water_heater.main
+            name: Water Heater
+            subtitle: Main Boiler
+            icon: mdi:water-pump
+            color: cyan
+
+  - title: Kitchen
+    path: kitchen
+    cards:
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: custom:smart-glass-card
+            entity: light.kitchen_main
+            name: Kitchen Lights
+            icon: mdi:lightbulb
+            color: amber
+            card_type: slider
+
+          - type: custom:smart-glass-card
+            entity: light.kitchen_under_cabinet
+            name: Under Cabinet
+            icon: mdi:led-strip
+            color: blue
+            card_type: slider
+
+          - type: custom:smart-glass-card
+            entity: switch.kitchen_exhaust
+            name: Exhaust Fan
+            icon: mdi:fan
+            color: emerald
+
+          - type: custom:smart-glass-card
+            entity: scene.kitchen_cooking
+            name: Cooking Mode
+            icon: mdi:chef-hat
+            color: violet

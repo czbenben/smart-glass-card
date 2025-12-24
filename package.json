@@ -1,0 +1,55 @@
+{
+  "name": "smart-glass-card",
+  "version": "1.0.0",
+  "description": "Modern glassmorphism card for Home Assistant",
+  "type": "module",
+  "main": "dist/smart-glass-card.js",
+  "module": "dist/smart-glass-card.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch",
+    "lint": "eslint src/*.ts",
+    "format": "prettier --write src/*.ts"
+  },
+  "keywords": [
+    "home-assistant",
+    "homeassistant",
+    "hacs",
+    "lovelace",
+    "custom-card"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "home-assistant-js-websocket": "^9.4.0",
+    "lit": "^3.2.0"
+  },
+  "devDependencies": {
+    "@home-assistant/mock-assistant-chroma": "^1.0.0",
+    "@home-assistant/meta": "^1.0.0",
+    "@lit-labs/analyzer": "^2.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/home-assistant-js-websocket": "^1.4.0",
+    "@types/mocha": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.2.0",
+    "rollup": "^4.18.0",
+    "rollup-plugin-minify-html-literals": "^1.2.6",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/smart-glass-card/issues"
+  },
+  "homepage": "https://github.com/yourusername/smart-glass-card#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/smart-glass-card.git"
+  }
+}
