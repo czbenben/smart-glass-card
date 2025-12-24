@@ -1,0 +1,10 @@
+---
+name: Smart Glass Card
+description: Modern glassmorphism card for Home Assistant
+version: "1.0.0"
+homeassistant: "2025.12.0"
+author: czbenben
+license: MIT
+documentation: https://github.com/czbenben/hacs-smart-card/blob/main/README.md
+codeowners:
+  - czbenben
