@@ -1,5 +1,5 @@
 import { defineConfig } from 'rollup';
-import typescript from '@rollup/plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import json from '@rollup/plugin-json';
@@ -16,10 +16,7 @@ export default defineConfig([
     plugins: [
       json(),
       resolve(),
-      typescript({
-        clean: true,
-        useTsconfigDeclarationDir: true,
-      }),
+      typescript(),
       terser({
         format: {
           comments: false,
@@ -43,13 +40,7 @@ export default defineConfig([
       json(),
       resolve(),
       typescript({
-        clean: true,
-        useTsconfigDeclarationDir: true,
-        tsconfigOverride: {
-          compilerOptions: {
-            sourceMap: true,
-          },
-        },
+        sourceMap: true,
       }),
     ],
   },
