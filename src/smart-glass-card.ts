@@ -1,6 +1,6 @@
-import { LitElement, html, css, unsafeCSS, PropertyValueMap } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { HomeAssistant, LovelaceCardEditor, extendsContext } from 'custom-card-helpers';
+import { HomeAssistant } from 'custom-card-helpers';
 import { styleMap } from 'lit/directives/style-map.js';
 
 // Color theme types
